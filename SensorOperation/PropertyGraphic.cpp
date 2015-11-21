@@ -48,7 +48,8 @@ void CPropertyGraphic::InitHSChartCtrl()
 	//允许控件中标签显示
 	m_HSChartCtrl.GetLegend()->SetVisible(true);
 	m_HSChartCtrl.GetLegend()->SetHorizontalMode(true);
-	m_HSChartCtrl.GetLegend()->UndockLegend(80, 50);
+	m_HSChartCtrl.GetLegend()->UndockLegend(30, 20);
+	m_HSChartCtrl.GetLegend()->SetFont(80, _T("Microsoft Sans Serif"));
 
 	//获取图片控件的rect区域
 	CRect picCtlRect;
@@ -82,7 +83,7 @@ void CPropertyGraphic::InitHSChartCtrl()
 	COLORREF SerieColorBlue = RGB(0, 0, 255);//创建实时曲线的颜色蓝色，默认颜色为红色
 	m_pTemperatureLine->SetColor(SerieColorGreen);//绘制温度实时曲线为绿色
 	m_pHumidityLine->SetColor(SerieColorBlue);//绘制湿度实时曲线的颜色为蓝色
-	m_pTemperatureLine->SetName(_T("temperature"));//显示温度标签
+	m_pTemperatureLine->SetName(_T("Temperature"));//显示温度标签
 	m_pHumidityLine->SetName(_T("Humidity"));//显示湿度标签
 	
 	UpdateData(FALSE);
